@@ -13,8 +13,24 @@ types = (
 )
 
 
+def get_html(_type=types[1]) -> str:
+    """
+    Given the desired type of challenges, this function returns the HTML of
+    the page on kom.club
+    """
+
+    url = BASE_URL + _type
+
+    response = requests.get(url)
+    response.raise_for_status()
+
+    html = response.text
+
+    return html
+
+
 def main():
-    pass
+    html = get_html()
 
 
 if __name__ == "__main__":
