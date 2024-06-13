@@ -13,7 +13,7 @@ types = (
 )
 
 
-def get_html(_type=types[1]) -> str:
+def get_kom_club_html(_type=types[1]) -> str:
     """
     Given the desired type of challenges, this function returns the HTML of
     the page on kom.club
@@ -30,7 +30,7 @@ def get_html(_type=types[1]) -> str:
 
 
 def main():
-    html = get_html()
+    html = get_kom_club_html()
 
 
 if __name__ == "__main__":
